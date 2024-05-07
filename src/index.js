@@ -13,7 +13,7 @@ bot.command('fact', async(ctx)=>{
     try{
     ctx.reply('Generating fact, please wait..');
     console.log("test")
-    let imgPath = `../temp/${uuid()}.jpg`;
+    let imgPath = `./temp/${uuid()}.jpg`;
     await generateFact(imgPath);
     await ctx.replyWithPhoto({source: imgPath});
     deleteFact(imgPath);
